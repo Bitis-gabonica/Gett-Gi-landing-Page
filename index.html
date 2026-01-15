@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GETT GI - Plateforme IoT Élevage</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#000000",
+              "text-main": "#1D1D1F",
+              "text-secondary": "#86868B",
+              "border-light": "#E5E5EA",
+              "bg-gray": "#F5F5F7",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "body": ["Space Grotesk", "sans-serif"],
+            },
+            animation: {
+              'wave-slow': 'wave 20s linear infinite',
+              'wave-slow-reverse': 'wave 25s linear infinite reverse',
+              'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+            },
+            keyframes: {
+              wave: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    
+    <style>
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: #FFFFFF;
+        color: #1D1D1F;
+      }
+      
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(229, 229, 234, 0.5);
+      }
+      
+      .clean-card {
+        background: #FFFFFF;
+        border: 1px solid #E5E5EA;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .clean-card:hover {
+        border-color: #000000;
+        transform: translateY(-2px);
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .wave-bg {
+        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyHUNd4g5FmDjfo6PkvP16p1xxtpNjLnrXDPvRE0AFpeDROzheyTbshqbk4vGCic0j7lZg0tHcM93rhIEP5moJ6H5wguovTfOA1qJRqL6W_u8k3aJwLyQZCpVj0g7Tt_kx8uvmWqjxqFM6msJEiOjF5j_L1ETrIQcTTz5certypydx39ZeohvQ7vcq6j6IbpB2tPbHoKcsYOgsxpPK4fmTLl38S3i8RMQHd73M8aK4BfF3VBIPIVsoyGORXWC5PvDJQZk7TuAN7MZL');
+        background-size: 200px 100%;
+      }
+      
+      /* Material Symbol alignment fix */
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
